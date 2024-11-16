@@ -163,6 +163,15 @@
         font-size: 1rem;
         color: #666;
         text-align: left;
+        position: sticky;
+        top: 100px;
+        /* Sticks 100px below the top */
+        max-height: calc(100vh - 120px);
+        /* Adjusted for viewport space */
+        overflow-y: auto;
+        /* Enables scrolling within the description */
+        padding-right: 10px;
+        /* Adds spacing for readability */
       }
 
       .project-pdf {
