@@ -108,9 +108,10 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 1.5rem;
+        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
+        transition: color 0.3s;
         display: flex;
         align-items: center;
-        transition: color 0.3s;
       }
 
       .header-right a:hover {
@@ -124,7 +125,7 @@
       a:hover {
         background-color: #f6f6f6;
         /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
-        transition: background-color 0.3s;
+        transition: background-color 0.3s ease;
       }
 
       .project-showcase {
@@ -161,13 +162,11 @@
         text-align: left;
         position: sticky;
         top: 110px;
-        /* Sticks 100px below the top */
+        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
         max-height: calc(100vh - 120px);
-        /* Adjusted for viewport space */
+        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
         overflow-y: auto;
-        /* Enables scrolling within the description */
         padding-right: 10px;
-        /* Adds spacing for readability */
       }
 
       .project-pdf {
@@ -182,7 +181,6 @@
         border-right: 1px solid rgb(246, 246, 246);
       }
 
-      /* Footer */
       .footer {
         padding: 20px 60px;
         font-size: 1rem;
@@ -249,6 +247,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
