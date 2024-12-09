@@ -3,278 +3,74 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giancarlo A. Haidar-Show-Insta Core Mode</title>
+    <title>Giancarlo A. Haidar-Show-InstaCore Mode</title>
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Link to Google Fonts for Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Link to Google Fonts for Archivo -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <style>
-      /* CSS Universal (*) Selector: https://www.w3schools.com/cssref/sel_all.php */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        line-height: 1.6;
-        color: #333;
-        scroll-behavior: smooth;
-        font-family: 'Archivo', sans-serif;
-      }
-
-      .container {
-        width: 100%;
-        padding: 0 60px;
-        margin: auto;
-      }
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        background-color: #ffffff;
-        padding: 15px 60px;
-        z-index: 1000;
-        font-family: 'Roboto', sans-serif;
-      }
-
-      .header::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 60px;
-        right: 60px;
-        height: 2px;
-        background-color: #f6f6f6;
-      }
-
-      .header-left {
-        text-align: left;
-      }
-
-      .header h1,
-      .header h2 {
-        font-weight: 400;
-      }
-
-      .header h1 {
-        font-size: 1.5rem;
-        color: #333;
-      }
-
-      .header h2 {
-        font-size: 1rem;
-        color: #777;
-      }
-
-      .header-center {
-        position: absolute;
-        left: 50%;
-        /* CSS transform Property: https://www.w3schools.com/cssref/css3_pr_transform.php */
-        transform: translateX(-50%);
-        display: flex;
-        gap: 60px;
-      }
-
-      .header-center a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        font-size: 1.1rem;
-        position: relative;
-      }
-
-      .header-center a:first-child.active::before {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #333;
-      }
-
-      .header-center a.active {
-        color: #000;
-      }
-
-      .header-right a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
-        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
-        transition: color 0.3s;
-        display: flex;
-        align-items: center;
-      }
-
-      .header-right a:hover {
-        color: #005582;
-      }
-
-      .header-center a:hover {
-        background-color: #f6f6f6;
-      }
-
-      a:hover {
-        background-color: #f6f6f6;
-        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
-        transition: background-color 0.3s ease;
-      }
-
-      .project-showcase {
-        padding: 40px 60px;
-      }
-
-      .project-video {
-        position: relative;
-        padding-top: 56.25%;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .project-video iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      .project-media-section {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-        margin-top: 20px;
-      }
-
-      .project-description {
-        flex: 1;
-        font-size: 1rem;
-        color: #666;
-        text-align: left;
-        position: sticky;
-        top: 110px;
-        /* CSS calc() Function: https://www.w3schools.com/cssref/func_calc.php */
-        max-height: calc(100vh - 120px);
-        /* CSS overflow-y Property: https://www.w3schools.com/cssref/css3_pr_overflow-y.php */
-        overflow-y: auto;
-        padding-right: 10px;
-      }
-
-      .project-pdf {
-        flex: 1;
-      }
-
-      .project-pdf iframe {
-        width: 100%;
-        height: 500px;
-        border: none;
-        border-left: 1px solid rgb(246, 246, 246);
-        border-right: 1px solid rgb(246, 246, 246);
-      }
-
-      .footer {
-        padding: 20px 60px;
-        font-size: 1rem;
-        color: #666;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        background-color: transparent;
-        font-family: 'Roboto', sans-serif;
-        position: relative;
-      }
-
-      .footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: #f6f6f6;
-      }
-
-      .footer .footer-section {
-        display: flex;
-        flex-direction: column;
-        margin-right: 40px;
-      }
-
-      .footer .footer-section a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-      }
-
-      .footer .footer-section a:hover {
-        background-color: #f6f6f6;
-      }
-
-      .footer .footer-section strong {
-        margin-bottom: 10px;
-      }
-
-      .footer .contact-message {
-        text-align: left;
-        font-size: 1.2rem;
-        color: #555;
-        margin-right: 40px;
-      }
-
-      .footer .email {
-        text-align: left;
-        font-size: 1rem;
-        color: #333;
-        margin-top: 5px;
-      }
-
-      .footer .last-updated {
-        font-size: 1rem;
-        color: #888;
-        margin-right: 40px;
-      }
-    </style>
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="styles_showcase.css">
   </head>
 
   <body>
     <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <h1>Insta Core Mode</h1>
-        <h2>Giancarlo A. Haidar</h2>
+        <h1><a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">
+            InstaCore Mode
+          </a></h1>
+        <h2><a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Giancarlo A. Haidar</a></h2>
       </div>
       <div class="header-center">
-        <a href="#SHOW" target="_self" class="active">Show</a>
-        <a href="#TELL" target="_self">Tell</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self" class="active">Show</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Tell</a>
       </div>
       <div class="header-right">
-        <a href="index.html" target="_self">X</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">X</a>
       </div>
     </header>
 
-    <!-- Project Showcase -->
+    <!-- Showcase -->
     <div class="container project-showcase">
-      <div class="project-video">
-        <iframe src="https://drive.google.com/file/d/1lrlsJQbd9ae5Ma9lJDotfUO-661ahnnl/preview?autoplay=1&loop=1&muted=1" allow="autoplay; loop"></iframe>
+      <div class="project-image-placeholder">
+        <img src="InstaCore Mode Before and After.jpg" alt="InstaCore Mode Before and After">
       </div>
-      <div class="project-media-section">
-        <p class="project-description">
-          This project focuses on creating a low-fidelity prototype to redesign the Instagram layout with a goal to promote healthier screen time habits. The redesign emphasizes simplified visuals and strategic layout adjustments aimed at minimizing addictive scrolling behaviors. Through UX design principles, the prototype incorporates features such as daily screen time limits, mindful prompts, and reduced visual clutter, all aimed at encouraging users to engage more thoughtfully with the app. This project aims to balance user engagement with well-being, demonstrating how intentional UX design can positively influence user habits.
-        </p>
-        <div class="project-pdf">
-          <iframe src="https://drive.google.com/file/d/1207OQXQRrj-N7a72hwNhiWWXItcVaeTn/preview"></iframe>
+      <div class="project-layout">
+        <div class="project-description">
+          <ul>
+            <li>
+              This Compass of Life project centred on creating a logo design that uniquely reflects the client's life journey and values. A brief self-report provided key insights into the client's life events, individual wants, and needs. The final logo, a personalized and symbolic representation of these themes, delivers a unique design that captures the story of the client's brief.
+            </li>
+          </ul>
+        </div>
+        <div class="project-details-and-images">
+          <div class="project-details">
+            <div class="details-row">
+              <div class="details-item">
+                <span class="details-label">Role</span>
+                <span class="details-value">Project Manager</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Collaborators</span>
+                <span class="details-value">None</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Tools</span>
+                <span class="details-value">Figma<br>Adobe Premiere Pro<br>Google Slides</span>
+              </div>
+              <div class="details-item">
+                <span class="details-label">Duration</span>
+                <span class="details-value">2024-2024</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-pdf-placeholder">
+            <img src="Compass of Life Black and White.jpg" alt="Compass of Life Black and White">
+            <figcaption>Black and White</figcaption>
+          </div>
         </div>
       </div>
     </div>
@@ -283,8 +79,8 @@
     <footer class="footer">
       <div class="footer-section">
         <strong>Main</strong>
-        <a href="#work">Show</a>
-        <a href="#about">Tell</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-show/" target="_self">Show</a>
+        <a href="https://giancarloahaidar.github.io/giancarloh-tell/" target="_self">Tell</a>
       </div>
       <div class="footer-section">
         <strong>Contact</strong>
@@ -293,10 +89,10 @@
       </div>
       <div class="contact-message">
         Let's have a coffee chat! <br>
-        <a href="mailto:giancarlo.a.haidar@gmail.com" class="email">giancarlo.a.haidar@gmail.com</a>
+        <a href="mailto:ghaidar@uwaterloo.ca" class="email">ghaidar@uwaterloo.ca</a>
       </div>
       <div class="last-updated">
-        LAST UPDATED 2024-11-10
+        Last Updated 2024-12-09
       </div>
     </footer>
   </body>
